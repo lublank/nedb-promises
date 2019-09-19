@@ -7,7 +7,8 @@ const
 class Cursor {
 	constructor(original, prerequisite, callback) {
 		if ( ! (original instanceof OriginalCursor)) {
-			throw new TypeError(`Unexpected ${typeof original}, expected: Cursor (nedb/lib/cursor)`)
+			console.warn(`Unexpected ${typeof original}, expected: Cursor (nedb/lib/cursor)`);
+			// throw new TypeError(`Unexpected ${typeof original}, expected: Cursor (nedb/lib/cursor)`)
 		}
 
 		if ( ! (prerequisite instanceof Promise)) {
